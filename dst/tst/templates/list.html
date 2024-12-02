@@ -1,0 +1,10 @@
+<h1>List Course</h1>
+<ul>
+    {% for course in courses %}
+        <li>
+            <a href="{% url 'update' course.id %}">update</a>
+            <a href="{% url 'del' course.id %}">delete</a>
+            Course ID: {{course.id}}, Course Name: {{course.name}}
+        </li>
+    {% endfor %}
+</ul>
